@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const mysql = require('mysql')
-const port = $PORT
+const port = 80
 const bodyParser = require('body-parser')
 
 let dbConfig = {
