@@ -77,7 +77,16 @@ app.post('/addguest', function (req, res) {
     if(err) {
         res.json("Error executing MySQL query")
     }
+  })
 })
+
+app.get('/deleteallguests/', (req, res) => {
+  let sql = `TRUNCATE TABLE guestbook`
+  let query = db.query(sql, (err, result) => {
+    if (err) throw err
+    console.log('Deleted all guests')
+    res.send('Deleted all guests')
+  })
 })
 
 app.post('/test', (req, res) => {
