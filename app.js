@@ -80,7 +80,7 @@ app.post('/addguest', function (req, res) {
   })
 })
 
-app.get('/deleteallguests/', (req, res) => {
+app.get('/deleteallguests', (req, res) => {
   let sql = `TRUNCATE TABLE guestbook`
   let query = db.query(sql, (err, result) => {
     if (err) throw err
